@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h2>プレイヤーリスト</h2>
+  <div class="btn-list">
+    <button onclick="location.href='/add'" class="btn btn-outline-secondary">プレイヤーの追加</button>
+    <form method="POST"><button type="submit" name="reset" class="btn btn-outline-danger">スコアの一括リセット</button></form>
+  </div>
+  <table class="score-board table">
+  
+    <tr>
+      <th class="player-th">プレイヤー</th>
+      <th class="score-th">スコア</th>
+      <th class="btn-th">ボタン一覧</th>
+    </tr>
+  
+    {% for player in players %}
+    <tr>
+      <td class="player">{{ player[1] }}</td>
+      <td>{{ player[2] }}</td>
+      <td class="btn-list">
+        <form method="POST"><button type="submit" name="count" value="{{ loop.index0 }}" class="btn btn-outline-success">加点</button>
+        </form>
+        <form method="POST"><button type="submit" name="sub" value="{{ loop.index0 }}" class="btn btn-outline-primary">減点</button>
+        </form>
+        <form action="update" method="POST"><button type="submit" name="update" value="{{ loop.index0 }}" class="btn btn-outline-info">編集</button>
+        </form>
+        <form method="POST"><button type="submit" name="done" value="{{ loop.index0 }}" class="btn btn-outline-danger">削除</button></form>
+      </td>
+    </tr>
+    {% endfor %}
+  
+  </table>
+</div>
+
+
+
+
+{% endblock %}

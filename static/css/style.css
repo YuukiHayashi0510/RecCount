@@ -1,0 +1,37 @@
+/* layout.html */
+
+header {
+    background-color: rgba(241, 237, 237, 0.87);
+    line-height: 60px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 4vw;
+    margin-left: 10vw;
+}
+
+table.score-board {
+    width: 60%;
+}
+
+.player-th {
+    width: 10%;
+}
+
+.score-th {
+    width: 10%;
+}
+
+.btn-th {
+    width: 20%;
+}
+
+.btn-list {
+    display: flex;
+}
+
+.btn {
+    margin: 1px;
+}
+
