@@ -11,6 +11,7 @@ header h1 {
     margin-left: 10vw;
 }
 
+/* main.html */
 table.score-board {
     width: 60%;
 }
@@ -35,3 +36,20 @@ table.score-board {
     margin: 1px;
 }
 
+/* add.html */
+.container.add-box {
+    margin-left: 10vw;
+}
+
+input.name-form {
+    width: 40%;
+}
+
+/* update.html */
+.container.update-box{
+    margin-left: 10vw;
+}
+
+.container.update-box.form-control{
+    width: 40%;
+}

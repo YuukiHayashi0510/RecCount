@@ -1,10 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div>プレイヤー名の編集</div>
-<form action="/" method="post">
-    <input type="text" name="updated_player" value="{{ player_title }}">
-    <button type="submit" name="updated_index" value="{{ player_index }}">変更</button>
-</form>
-<br><button onclick="location.href='/'">一覧に戻る</button>
+<div class="container update-box">
+    <h2>プレイヤー名の編集</h2>
+    <form action="/" method="post">
+        <input type="text" name="updated_player" value="{{ player_title }}" class="form-control">
+        <button type="submit" name="updated_index" value="{{ player_index }}" class="btn btn-outline-info">変更</button>
+    </form>
+    <br><button onclick="location.href='/'" class="btn btn-outline-dark">一覧に戻る</button>
+</div>
+
 {% endblock %}

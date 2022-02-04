@@ -1,3 +1,4 @@
+from audioop import reverse
 from itertools import count
 from flask import Flask, render_template, request, url_for, redirect
 import pandas as pd
@@ -15,10 +16,11 @@ def saveCSV(array):
     players_df = pd.DataFrame(array, columns=column_names)
     players_df.to_csv('./csv/players.csv', index=False)
 
-# todo一覧画面
+# 一覧画面
 
 @app.route('/', methods=['GET', 'POST'])
 def main():
+    players.sort(reverse=True, key=lambda players:players[2])
     if request.method == 'GET':
         return render_template('main.html', players=players)
     else:

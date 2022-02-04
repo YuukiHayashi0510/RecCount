@@ -1,10 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div>プレイヤーの追加</div>
-<form method="post">
-  <input type="text" name="new_player" placeholder="プレイヤー名を入力">
-  <input type="submit" value="追加">
-</form>
-<br><button onclick="location.href='/'">一覧に戻る</button>
+<div class="container add-box">
+  <h2>プレイヤーの追加</h2>
+  <form method="post">
+    <input type="text" name="new_player" placeholder="プレイヤー名を入力" class="form-control name-form">
+    <input type="submit" value="追加" class="btn btn-outline-secondary">
+  </form>
+  <br><button onclick="location.href='/'" class="btn btn-outline-dark">一覧に戻る</button>
+</div>
+
 {% endblock %}
