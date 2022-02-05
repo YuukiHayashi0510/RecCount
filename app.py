@@ -29,6 +29,7 @@ def main():
             for _ in players:
                 players[i][2] = 0
                 i+=1
+            players.sort() # ついでに名前順にソート
             saveCSV(players)
             return redirect(url_for('main'))
         # 完了ボタンを押した時の動作
