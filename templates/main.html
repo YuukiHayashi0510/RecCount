@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div class="container">
+<div class="contents container">
   <h2>プレイヤーリスト</h2>
   <div class="btn-list">
     <button onclick="location.href='/add'" class="btn btn-outline-secondary">プレイヤーの追加</button>
     <form method="POST"><button type="submit" name="reset" class="btn btn-outline-danger">スコアの一括リセット</button></form>
   </div>
+
   <table class="score-board table">
-  
     <tr>
       <th class="player-th">プレイヤー</th>
       <th class="score-th">スコア</th>

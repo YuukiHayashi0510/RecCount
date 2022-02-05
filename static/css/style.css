@@ -12,8 +12,13 @@ header h1 {
 }
 
 /* main.html */
+.contents {
+    text-align: center;
+}
+
 table.score-board {
     width: 60%;
+    margin: 0 auto;
 }
 
 .player-th {
@@ -30,6 +35,7 @@ table.score-board {
 
 .btn-list {
     display: flex;
+    justify-content: center;
 }
 
 .btn {
