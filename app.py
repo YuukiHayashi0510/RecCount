@@ -74,8 +74,11 @@ def add():
         player = [date_added, added_player, score_initialized]
         # 配列に追加
         players.append(player)
-        saveCSV(players)
-        return render_template('add.html')
+        if added_player != "":
+            saveCSV(players)
+            return render_template('add.html')
+        else:
+            return redirect(url_for('main'))
 
 
 # Playerを更新
